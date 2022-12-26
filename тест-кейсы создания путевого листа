@@ -1,0 +1,239 @@
+Проект - https://art.taxi.mos.ru/login
+Среда тестирования - PC, Google Chrome версия 103.0.5060.114, Mac os
+Цель - Проверка функционала создания путевого листа через интерфейс пользователся 
+
+Preconditions 
+Приложение Microsoft Edge перейти на сайт https://art.taxi.mos.ru/login
+
+Создание путевого листа через интерфейс
+
+Шаги 
+1. Открываем браузер  "Microsoft Edge" и запускаем Средства Разработчика.  переходим  на сайт https://art.taxi.mos.ru
+2. Вносим данные для входа,  и нажимаем "Вход"
+Логин: 9063878667 
+пароль: 0ErEN7k3
+3. Нажимаем на вкладку "Путевые листы"
+4.  Наживаем на вкладку "Добавить"
+5.Выбираем поля: Водитель"Иванов А. Е." , транспортное средство "Hyundai Solaris В782ТН750". Нажимаем "Сохранить"
+6.Нажимаем "Сохранить"
+
+Ожидаемый результат
+1. После выполнения 1 шага:
+URL-адрес запроса: https://art.taxi.mos.ru/loading-styles.css
+Метод запроса: GET
+Код состояния: 200 OK (из кэша диска)
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+2. После выполения 2 шага: 
+Перешли в личный кабинет. Открываем В "Средства Разработчика" URL-адрес запроса: https://art.taxi.mos.ru/api/authenticate Метод запроса: POST
+Код состояния: 200 
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+3. После выполения 3 шага: 
+Открылся список путевых листов.URL-адрес запроса: https://art.taxi.mos.ru/api/waybills?pageNum=0&pageSize=30
+Метод запроса: GET
+Код состояния: 200 
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+4. После выполения 4 шага 
+Появилась вкладка "новый путевой лист" URL-адрес запроса: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2
+Метод запроса: GET
+Код состояния: 200 
+Удаленный адрес: 216.58.210.163:443
+Политика источника ссылки: strict-origin-when-cross-origin
+5. После выполения 5 шага: 
+Открывается вкладка созданного путевого листа URL-адрес запроса: https://art.taxi.mos.ru/09e00606cc84b4f19fc11d1075a14a56
+Метод запроса: POST
+Код состояния: 200 OK
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+6. После выполения 6 шага: 
+Путевой лист сохранён,открылся список всех путевых листов.URL-адрес запроса: https://art.taxi.mos.ru/api/waybills?pageNum=0&pageSize=30
+Метод запроса: GET
+Код состояния: 200 
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+
+
+Удаление путевого листа 
+
+Шаги 
+1. Открываем браузер  "Microsoft Edge" и запускаем Средства Разработчика.  переходим  на сайт https://art.taxi.mos.ru
+2. Вносим данные для входа  и нажимаем "Вход"
+-Логин: 9063878667 
+-Пароль: 0ErEN7k3
+3. Нажимаем на вкладку "Путевые листы"
+4 В поле "Искать" вводим данные
+-Иванов А.Е
+5.Выделяем галочкой нужный нам путевой лист
+6.Нажимаем "Удалить запись" и подтверждаем удаление
+
+Ожидаемый результат 
+1. После выполения 1 шага: 
+URL-адрес запроса: https://art.taxi.mos.ru/loading-styles.css
+Метод запроса: GET
+Код состояния: 200 OK (из кэша диска)
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+2. После выполения 2 шага 
+Перешли в личный кабинет. Открываем В "Средства Разработчика" URL-адрес запроса: https://art.taxi.mos.ru/api/authenticate Метод запроса: POST
+Код состояния: 200 
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+3. После выполения 3 шага 
+Открылся список путевых листов.URL-адрес запроса: https://art.taxi.mos.ru/api/waybills?pageNum=0&pageSize=30
+Метод запроса: GET
+Код состояния: 200 
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+4. После выполнения 4 шага 
+Появилась вкладка "новый путевой лист" URL-адрес запроса: https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2
+Метод запроса: GET
+Код состояния: 200 
+Удаленный адрес: 216.58.210.163:443
+Политика источника ссылки: strict-origin-when-cross-origin
+5. После выполения 5 шага 
+путевой лист выделен URL-адрес запроса: URL-адрес запроса: https://art.taxi.mos.ru/09e00606cc84b4f19fc11d1075a14a56
+Метод запроса: POST
+Код состояния: 200 OK
+Удаленный адрес: 82.202.190.189:443cc84b4f19fc11d1075a14a56
+Метод запроса: POST
+Код состояния: 200 OK
+Удаленный адрес: 82.202.190.189:443
+6. После выполения 6 шага 
+Путевой лист удалён URL-адрес запроса: https://art.taxi.mos.ru/api/waybills/2199437
+Метод запроса: DELETE
+Код состояния: 200 
+Удаленный адрес: 82.202.190.189:443
+Политика источника ссылки: strict-origin-when-cross-origin
+
+
+Создание путевого листа через Postman
+
+Шаги
+1. Выполнить POST запрос URL https://art.taxi.mos.ru/api/authenticate с выбранными параметрами "msisdn" = 9063878667, "password" = 0ErEN7k3 
+-Логин: 9063878667 
+-Пароль: 0ErEN7k3
+2. Выполнить POST запрос URL https://art.taxi.mos.ru/api/authenticate с выбранными параметрами "msisdn" = 9063878667, "password" = 0ErEN7k3 "employeeId" =1631
+-Логин: 9063878667 
+-Пароль: 0ErEN7k3
+3. Выполнить GET запрос https://art.taxi.mos.ru/api/employees/drivers?pageNum=0&pageSize=30                                 
+3.1 Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+4. Выполнить GET запрос https://art.taxi.mos.ru/api/employees/drivers?pageNum=0&pageSize=30                                 
+4.1 Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+5.Выполнить POST запрос https://art.taxi.mos.ru/api/waybills                                                      
+5.1 Во вкладке  body вводим тестовые данные {"status":"ISSUED","vehicle":{"id":800},"driver":{"id":2226602}}                           
+5.2 в  Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+- vehicle":{"id":800},"driver":{"id":2226602}
+6.Выполнить GET запрос https://art.taxi.mos.ru/api/waybills/driver/800                              
+6.1   Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+- Водителя ID 800
+7.Выполнить GET запрос https://art.taxi.mos.ru/api/waybills/2207077
+- путевой лист ID 2207077
+
+Ожидаемый результат 
+1. После выполения 1 шага 
+Status code: 200 ОК Получен ответ об  [{"employeeId":1631,"employeeType":"OPERATOR","orgName":"ИП Иванов А Е","orgType":"TAXI_PARK"}]
+2. После выполения 2 шага 
+Status code: 200 ОК. Токен получен
+3. После выполения 3 шага 
+Status code: 200 ОК .Получен ответ о списке водителей 
+4. После выполения 4 шага 
+Status code: 200 ОК. Получен ответ о списке автомобилей
+5. После выполения 5 шага 
+Status code: 200 ОК Получен ответ об успешном создании путевого листа  {
+    "id": 2207077,
+    "status": "ISSUED",
+    "issuer": {
+        "id": 1631,
+        "abbreviatedName": "Иванов А. Е."
+    },
+    "driver": {
+        "id": 800,
+        "abbreviatedName": "Иванов А. Е."
+    },
+    "vehicle": {
+        "id": 199091,
+        "shortName": "Hyundai Solaris М869ТК21"
+    },
+    "checkups": null,
+    "dateTimeGiven": "2022-11-07T16:49:09.571+00:00",
+    "dateTimeValid": "2022-11-08T14:49:09.571+00:00"
+}
+6. После выполения 6 шага 
+Status code: 200 ОК Получен ответ Получение ID  листа по ID водителя 
+ "waybillId": 2207077,
+    "status": "FOUND"
+7. После выполения 7 шага 
+Status code: 200 ОК  ответ  путевой лист получен
+
+
+Удаление  путевого листа через Postman
+
+Шаги 
+1. Выполнить POST запрос URL https://art.taxi.mos.ru/api/authenticate с выбранными параметрами "msisdn" = 9063878667, "password" = 0ErEN7k3 
+-Логин: 9063878667 
+-пароль: 0ErEN7k3
+2. Выполнить POST запрос URL https://art.taxi.mos.ru/api/authenticate с выбранными параметрами "msisdn" = 9063878667, "password" = 0ErEN7k3 "employeeId" =1631
+-Логин: 9063878667 
+-пароль: 0ErEN7k3
+3. Выполнить GET запрос https://art.taxi.mos.ru/api/employees/drivers?pageNum=0&pageSize=30                                 
+3.1 Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+4. Выполнить GET запрос https://art.taxi.mos.ru/api/employees/drivers?pageNum=0&pageSize=30                                 
+4.1 Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+5.Выполнить POST запрос https://art.taxi.mos.ru/api/waybills                                                      
+5.1 Во вкладке  body вводим тестовые данные {"status":"ISSUED","vehicle":{"id":800},"driver":{"id":2226602}}                           
+5.2 в  Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+- водителя iD 800.  машины id 2226602
+6.Выполнить GET запрос https://art.taxi.mos.ru/api/waybills/driver/800                              
+6.1   Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+- Водителя ID 800
+7.Выполнить GET запрос https://art.taxi.mos.ru/api/waybills/2207077
+- путевой лист ID 2207077
+8.Выполнить DEL запрос https://art.taxi.mos.ru/api/waybills/2207077                               
+8.1 Во вкладке Headers "Authorization" ввести токен полученый во 2 шаге
+- путевой лист ID 2207077
+
+Ожидаемый результат 
+1. После выполения 1 шага 
+Status code: 200 ОК Получен ответ об  [{"employeeId":1631,"employeeType":"OPERATOR","orgName":"ИП Иванов А Е","orgType":"TAXI_PARK"}]
+2. После выполения 2 шага 
+Status code: 200 ОК. Токен получен
+3. После выполения 3 шага 
+Status code: 200 ОК .Получен ответ о списке водителей 
+4. После выполения 4 шага 
+Status code: 200 ОК. Получен ответ о списке автомобилей
+5. После выполнения 5 шага 
+Status code: 200 ОК Получен ответ об успешном создании путевого листа  {
+    "id": 2207077,
+    "status": "ISSUED",
+    "issuer": {
+        "id": 1631,
+        "abbreviatedName": "Иванов А. Е."
+    },
+    "driver": {
+        "id": 800,
+        "abbreviatedName": "Иванов А. Е."
+    },
+    "vehicle": {
+        "id": 199091,
+        "shortName": "Hyundai Solaris М869ТК21"
+    },
+    "checkups": null,
+    "dateTimeGiven": "2022-11-07T16:49:09.571+00:00",
+    "dateTimeValid": "2022-11-08T14:49:09.571+00:00"
+}
+6. После выполения 6 шага 
+Status code: 200 ОК Получен ответ Получение ID  листа по ID водителя 
+ "waybillId": 2207077,
+    "status": "FOUND"
+7. После выполения 7 шага 
+Status code: 200 ОК  ответ  путевой лист получен
+8. После выполения 8 шага 
+Status code: 200 ОК путевой лист удалён 
+
+
+
+
+
+
